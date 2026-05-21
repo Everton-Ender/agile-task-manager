@@ -22,7 +22,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Rodar testes
-        env:
-          PYTHONPATH: ${{ github.workspace }}
         run: |
-          pytest
+          PYTHONPATH=. pytest
