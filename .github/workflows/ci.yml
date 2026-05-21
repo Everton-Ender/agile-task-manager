@@ -21,6 +21,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Definir root do projeto
+        run: |
+          echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
       - name: Rodar testes
         run: |
-          PYTHONPATH=. pytest
+          pytest
