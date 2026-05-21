@@ -1,4 +1,4 @@
-from src.task_manager import TaskManager
+from task_manager import TaskManager
 
 
 def test_add_task():
